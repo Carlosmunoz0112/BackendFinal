@@ -6,10 +6,15 @@ const productoSchema = mongoose.Schema({
         type: String,
         required: [true, 'El campo id es obligatorio']
     },
-    nombre: {
+    numerodeventa: {
         type: String,
         required: [true, 'El campo Nombre es obligatorio']
     },
+
+producto: {
+    type: String,
+    required : [true, 'El producto es obligatorio']
+},
     precio: {
         type: Number,
         required: [true, 'El campo Correo es obligatorio']
@@ -26,6 +31,7 @@ const productoSchema = mongoose.Schema({
         type: String,
         required: [true, 'El campo de categoria es obligatorio']
     }
+
 });
 
 module.exports = mongoose.model('producto', productoSchema);
